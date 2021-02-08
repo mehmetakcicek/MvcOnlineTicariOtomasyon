@@ -25,8 +25,13 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         [StringLength(30)]
         public string UrunGorsel { get; set; }
 
-        public Kategori Kategori { get; set; }
-        public SatisHareket SatisHareket { get; set; }
+        public virtual Kategori Kategori { get; set; }
+
+        //public SatisHareket SatisHareket { get; set; } Hatalı olan kullanım şekli...
+        public ICollection<SatisHareket> SatisHarekets { get; set; }
+        
+
+
 
 
 
